@@ -9,7 +9,7 @@ package com.imaginato.test.util
  */
 object Constant {
 
-    const val BASE_URL = ""
+    const val BASE_URL = "http://private-222d3-homework5.apiary-mock.com/api/"
     const val PREF_NAME = "pref.imaginato"
 
     const val IMEI_NUMBER = "357175048449937"
