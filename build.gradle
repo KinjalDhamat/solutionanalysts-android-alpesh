@@ -37,6 +37,8 @@ ext{
 
     lifecycle = '2.2.0'
     koin = '2.1.6'
+    retrofit = '2.9.0'
+    okHttp = '3.6.0'
 
     spinKit = '1.4.0'
     intuitSdpSssp = '1.0.6'
