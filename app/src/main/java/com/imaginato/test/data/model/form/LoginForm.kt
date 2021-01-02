@@ -1,4 +1,4 @@
-package com.imaginato.test.data
+package com.imaginato.test.data.model.form
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable

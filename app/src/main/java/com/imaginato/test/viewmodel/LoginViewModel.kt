@@ -4,7 +4,7 @@ import android.content.res.Resources
 import androidx.databinding.ObservableField
 import androidx.lifecycle.ViewModel
 import com.imaginato.test.R
-import com.imaginato.test.data.LoginForm
+import com.imaginato.test.data.model.form.LoginForm
 
 /**
  * Purpose -
