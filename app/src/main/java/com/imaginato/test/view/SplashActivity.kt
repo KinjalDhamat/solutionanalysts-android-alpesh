@@ -1,5 +1,7 @@
 package com.imaginato.test.view
 
+import android.app.ActivityOptions
+import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import androidx.databinding.ViewDataBinding
@@ -21,11 +23,14 @@ class SplashActivity : BaseActivity() {
     override fun initializeComponent() {
         Handler(Looper.getMainLooper()).postDelayed({
             navigateToLogin()
-        }, 3000)
+        }, 1000)
     }
 
     //naviage to login screen
     private fun navigateToLogin() {
-
+        val intentLoginActivity = Intent(this@SplashActivity, LoginActivity::class.java)
+        val options = ActivityOptions.makeCustomAnimation(this, R.anim.anim_enter_from_right, R.anim.anim_exit_to_left)
+        startActivity(intentLoginActivity, options.toBundle())
+        finish()
     }
 }

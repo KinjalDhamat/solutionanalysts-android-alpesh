@@ -48,6 +48,12 @@ dependencies {
 
     implementation "com.google.android.material:material:$material"
 
+    /*Lifecycle*/
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle"
+
     //loader
     implementation "com.github.ybq:Android-SpinKit:$spinKit"
 
