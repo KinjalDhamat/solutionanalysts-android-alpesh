@@ -64,6 +64,12 @@ dependencies {
     //log
     implementation "com.jakewharton.timber:timber:$timber"
 
+    /*Koin*/
+    implementation "org.koin:koin-androidx-viewmodel:$koin"
+    implementation "org.koin:koin-core:$koin"
+    implementation "org.koin:koin-android:$koin"
+    implementation "org.koin:koin-androidx-scope:$koin"
+
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

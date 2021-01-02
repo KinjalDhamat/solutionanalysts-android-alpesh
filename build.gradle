@@ -36,6 +36,7 @@ ext{
     material='1.2.1'
 
     lifecycle = '2.2.0'
+    koin = '2.1.6'
 
     spinKit = '1.4.0'
     intuitSdpSssp = '1.0.6'
