@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
 
     <data>
 
@@ -38,7 +39,8 @@
             app:layout_constraintBottom_toTopOf="@+id/tl_login_password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_label_login">
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_login"
+            bind:errorMessage="@{viewModel.errUsername}">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_login_username"
@@ -63,7 +65,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tl_login_username"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            bind:errorMessage="@{viewModel.errPassword}">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_login_password"
