@@ -12,5 +12,5 @@ import org.koin.dsl.module
  */
 
 val repositoryModule = module {
-    single { UserRepository(get()/*pass APIHelper dependency get from */) }
+    single { UserRepository(get()/*pass APIHelper dependency for API operation*/, get()/*pass userDao dependency for db operation*/) }
 }

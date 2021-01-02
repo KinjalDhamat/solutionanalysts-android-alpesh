@@ -28,7 +28,11 @@ object Constant {
     const val SOMETHING_WRONG_ERROR = "Something went wrong!!\nPlease try again later."
     const val SOMETHING_WRONG_ERROR_STATUS = "505"
 
+    //request header
     const val HEADER_IMSI: String = "IMSI"
     const val HEADER_IMEI: String = "IMEI"
+
+    //response header
+    const val HEADER_KEY_X_ACC_TYPE: String = "X-Acc"
 
 }

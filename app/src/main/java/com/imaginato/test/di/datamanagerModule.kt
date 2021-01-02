@@ -2,9 +2,12 @@ package com.imaginato.test.di
 
 import android.content.Context
 import android.content.SharedPreferences
+import androidx.room.Room
 import com.imaginato.test.BuildConfig
+import com.imaginato.test.data.model.local.db.AppDatabase
 import com.imaginato.test.data.model.local.pref.PreferenceManager
 import com.imaginato.test.util.Constant
+import com.imaginato.test.util.DatabaseConstant
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -50,6 +53,12 @@ val datamanagerModule = module {
             get(named(Constant.INTERCEPTOR_OK_HTTP))
         )
     }
+
+    /**
+     * Provides AppDatabase and Dao
+     **/
+    single { provideDatabase(androidContext()) }
+    single { provideUserDao(get()) }
 }
 
 //preference dependency
@@ -87,3 +96,9 @@ private fun provideOkHttpClient(
         .readTimeout(60, TimeUnit.SECONDS).writeTimeout(60, TimeUnit.SECONDS)
         .addInterceptor(headerInterceptor).build()
 }
+
+//database dependencies
+private fun provideDatabase(context: Context) =
+    Room.databaseBuilder(context, AppDatabase::class.java, DatabaseConstant.DB_NAME).build()
+
+private fun provideUserDao(appDatabase: AppDatabase) = appDatabase.userDao()
