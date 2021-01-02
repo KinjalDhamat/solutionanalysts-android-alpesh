@@ -18,7 +18,6 @@ class LoginForm constructor(private var _username: String, private var _password
         set(value) {
             _username = value
             notifyPropertyChanged(BR.username)
-            notifyPropertyChanged(BR.enabled)
         }
 
     var password: String
@@ -26,9 +25,5 @@ class LoginForm constructor(private var _username: String, private var _password
         set(value) {
             _password = value
             notifyPropertyChanged(BR.password)
-            notifyPropertyChanged(BR.enabled)
         }
-
-    var enabled: Boolean = false
-        @Bindable get() = username.trim() != "" && password != ""
 }

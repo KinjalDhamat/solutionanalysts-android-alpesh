@@ -1,7 +1,9 @@
 package com.imaginato.test.viewmodel
 
+import android.content.res.Resources
 import androidx.databinding.ObservableField
 import androidx.lifecycle.ViewModel
+import com.imaginato.test.R
 import com.imaginato.test.data.LoginForm
 
 /**
@@ -11,7 +13,7 @@ import com.imaginato.test.data.LoginForm
  *
  * Created on 2/1/21
  */
-class LoginViewModel : ViewModel() {
+class LoginViewModel constructor(private val resources: Resources) : ViewModel() {
     var errUsername = ObservableField<String>()
     var errPassword = ObservableField<String>()
 
@@ -30,14 +32,20 @@ class LoginViewModel : ViewModel() {
     private fun isValidForm(): Boolean {
         resetErrorFields()
         if (loginFields.username.trim().isEmpty()) {
-            //bind error
+            errUsername.set(resources.getString(R.string.error_empty_username))
             return false
         } else if (loginFields.password.isEmpty()) {
             errPassword.set("")
-            //bind error
+            errPassword.set(resources.getString(R.string.error_empty_password))
             return false
         }
         resetErrorFields()
         return true
+    }
+
+    fun login() {
+        if (isValidForm()) {
+
+        }
     }
 }
