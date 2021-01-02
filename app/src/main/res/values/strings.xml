@@ -2,8 +2,8 @@
     <string name="app_name">Imaginato</string>
     <string name="action_ok">OK</string>
     <string name="action_cancel">Cancel</string>
-
     <string name="action_dialog_default">@string/action_ok</string><!--Defaults actions for dialog-->
+    <string name="error_something_went_wrong">Something went wrong!!\nPlease try again later.</string>
 
     <!--Login-->
     <string name="label_login_title">Login</string>

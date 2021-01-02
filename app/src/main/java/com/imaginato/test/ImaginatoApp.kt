@@ -1,10 +1,7 @@
 package com.imaginato.test
 
 import com.imaginato.test.base.BaseApp
-import com.imaginato.test.di.apiModule
-import com.imaginato.test.di.basicModule
-import com.imaginato.test.di.datamanagerModule
-import com.imaginato.test.di.viewmodelModule
+import com.imaginato.test.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -26,7 +23,7 @@ class ImaginatoApp : BaseApp() {
         startKoin {
             androidContext(this@ImaginatoApp)
             modules(
-                listOf(basicModule, apiModule, datamanagerModule, viewmodelModule)
+                listOf(basicModule, apiModule, datamanagerModule, repositoryModule, viewmodelModule)
             )
         }
     }

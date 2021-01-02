@@ -1,5 +1,7 @@
 package com.imaginato.test.di
 
+import com.imaginato.test.data.model.api.ApiHelper
+import com.imaginato.test.data.model.api.ApiHelperImpl
 import com.imaginato.test.data.model.api.ApiService
 import com.imaginato.test.util.Constant
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -21,7 +23,8 @@ val apiModule = module {
      * dependencies
      **/
     single { provideRetrofit(get()) }
-    single { provideApiService(get()) }
+    single { provideApiService(get()/*Pass ApiService instance to ApiHelperImpl*/) }
+    single<ApiHelper> { return@single ApiHelperImpl(get()/*Pass ApiService instance*/) }
 }
 
 private fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit =

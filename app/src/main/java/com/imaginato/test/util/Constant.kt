@@ -19,6 +19,8 @@ object Constant {
     const val INTERCEPTOR_OK_HTTP = "OK_HTTP_INTERCEPTOR"
     const val TAG_OK_HTTP = "OkHttp"
 
+    const val NO_INTERNET_CONNECTION = "No internet connection.\nCheck your connectivity and retry."
+    const val NO_INTERNET_CONNECTION_STATUS = "503"
 
     const val TIME_OUT_CONNECTION = "Cannot connect to server.\nPlease try again later."
     const val TIME_OUT_CONNECTION_STATUS = "504"

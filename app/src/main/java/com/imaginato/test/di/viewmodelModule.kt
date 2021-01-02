@@ -14,6 +14,6 @@ import org.koin.dsl.module
 val viewmodelModule = module {
 /*Login ViewModel*/
     viewModel {
-        LoginViewModel(get()/*resource dependency*/)
+        LoginViewModel(get()/*resource dependency*/, get()/*NetworkUtils dependency*/, get()/*UserRepository dependency*/)
     }
 }
