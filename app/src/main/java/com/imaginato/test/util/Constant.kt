@@ -26,5 +26,7 @@ object Constant {
     const val SOMETHING_WRONG_ERROR = "Something went wrong!!\nPlease try again later."
     const val SOMETHING_WRONG_ERROR_STATUS = "505"
 
+    const val HEADER_IMSI: String = "IMSI"
+    const val HEADER_IMEI: String = "IMEI"
 
 }
