@@ -48,6 +48,16 @@ dependencies {
 
     implementation "com.google.android.material:material:$material"
 
+    //loader
+    implementation "com.github.ybq:Android-SpinKit:$spinKit"
+
+    //sp and dp font size
+    implementation "com.intuit.sdp:sdp-android:$intuitSdpSssp"
+    implementation "com.intuit.ssp:ssp-android:$intuitSdpSssp"
+
+    //log
+    implementation "com.jakewharton.timber:timber:$timber"
+
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

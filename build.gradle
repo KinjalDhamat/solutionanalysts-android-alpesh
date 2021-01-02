@@ -37,4 +37,8 @@ ext{
 
     lifecycle = '2.2.0'
 
+    spinKit = '1.4.0'
+    intuitSdpSssp = '1.0.6'
+    timber = '4.7.1'
+
 }
